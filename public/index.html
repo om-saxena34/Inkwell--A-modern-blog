@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Inkwell — A Modern Blog</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="/" class="logo" onclick="navigate('home');return false;">Ink<em>well</em></a>
+  <ul class="nav-links">
+    <li><a href="#" onclick="navigate('home');return false;">Home</a></li>
+    <li><a href="#" onclick="navigate('articles');return false;">Articles</a></li>
+    <li><a href="#" onclick="navigate('about');return false;">About</a></li>
+    <li id="navAuthArea"></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" onclick="toggleMobileNav()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="#" onclick="navigate('home');toggleMobileNav();return false;">Home</a>
+  <a href="#" onclick="navigate('articles');toggleMobileNav();return false;">Articles</a>
+  <a href="#" onclick="navigate('about');toggleMobileNav();return false;">About</a>
+  <div id="mobileAuthArea"></div>
+</div>
+
+<!-- VIEWS -->
+<div id="app"></div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- MODAL BACKDROP -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modalBox"></div>
+</div>
+
+<script src="/js/app.js"></script>
+</body>
+</html>
